@@ -1,27 +1,44 @@
 # This is a Guess the Number game.
 import random
+import time
+import sys
 
-guessesTaken = 6
+guessesTaken = 0
 
-print('I should guess the number starting from:')
-start = int(input())
+print('CAN YOU GUESS THE NUMBER?\n')
+print('Welcome! What is your name?')
+myName = input()
+
+print('\nWell, ' + myName + '\n')
+print('Okay tell me the range between which you would like to guess:')
+print('You want to guess the number in the range starting from:')
+while True:
+    try:
+        start = int(input())
+        break
+    except:
+        print('Only numbers allowed')
 print('And ending to:')
-end = int(input())
-if start > end:
-    print('ERROR IN THE RANGE')
-    exit(-1)
 
-if(end - start <= 20):
+while True:
+    try:
+        end = int(input())
+        break
+    except:
+        print('Only numbers allowed')
+        
+if start >= end:
+    print('ERROR IN THE RANGE')
+    sys.exit()
+
+if(end - start < 20):
     print('Difficulty Level: EASY')
-elif(end - start <= 50):
+elif(end - start < 50):
     print('Difficulty Level: NORMAL')
-elif(end - start <= 100):
+elif(end - start < 100):
     print('Difficulty Level: HARD')
 else:
     print('WOAH that is EXTREME LEVEL')
-
-print('Hello! What is your name?')
-myName = input()
 
 
 print('Well, ' + myName + ', I am thinking of a number between ' + str(start) + ' and ' + str(end) + '.')
@@ -29,15 +46,21 @@ print('You have 6 guesses')
 
 number = random.randint(start,end)
 
-while guessesTaken :
-    print('Take YOUR guess : ' + str(7 - guessesTaken))
-    guess = input()
-    guess = int(guess)
-    guessesTaken = guessesTaken - 1
+while guessesTaken <= 6 :
+    print('Take YOUR guess : ' + str(1 + guessesTaken))
+    
+    while True:
+        try:
+            guess = int(input())
+            break
+        except:
+            print('Only numbers allowed')
+        
+    guessesTaken = guessesTaken + 1
 
     if guess < start or guess > end:
         print('Guess should be between ' + str(start) + ' and ' + str(end) + '.')
-        guessesTaken = guessesTaken + 1
+        guessesTaken = guessesTaken - 1
         continue
     if guess < number:
         print('Your guess is too low.')
@@ -49,10 +72,12 @@ while guessesTaken :
         break
 
 if guess == number:
-    guessesTaken = str(guessesTaken + 1)
+    guessesTaken = str(guessesTaken)
     print('Good job, ' + myName + '! You guessed my number in ' +guessesTaken + ' guesses!')
 
 if guess != number:
     number = str(number)
     print('Nope. The number I was thinking of was ' + number + '.')
+
+time.sleep(4)
         
