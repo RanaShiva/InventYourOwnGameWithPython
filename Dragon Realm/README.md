@@ -1,4 +1,4 @@
-This Folder contains a game that I learned from <b>Sir Al Sweigart through his Book<b>- <i>"Invent your game with python"</i>.</br>
+This Folder contains a game that I learned from <b>Sir Al Sweigart through his Book<b>- <i>"Invent your own game with python"</i>.</br>
 I did tweaked the code a little to make a different kind of game.</br>
 (1)-To see the source code see the dragon.py file.</br>
 (2)-To play the game download dragon.exe file from the same folder to your computer.
