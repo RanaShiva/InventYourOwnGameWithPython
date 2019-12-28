@@ -1,4 +1,4 @@
-#HOW TO PLAY!!
+<h1>HOW TO PLAY!!</h1>
 This Folder contains a game that I learned from <b>Sir Al Sweigart</b> through his book- <i>"Invent your own games with python"</i>.</br>
 I did tweaked the code a little to make a different kind of game.</br>
 (1)-To see the source code see the dragon.py file.</br>
