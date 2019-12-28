@@ -75,3 +75,4 @@ if(totalCoins):
 
 print('Thanks for playing!!')
 print('We will miss you MY LORD!!!')
+time.sleep(4)
