@@ -1,4 +1,5 @@
 # A Program that tells jokes!
+import time
 
 print('What do you get when you cross a snowman with a vampire?')
 input()
@@ -39,6 +40,7 @@ if(number == 21):
 else:
     print('Do play again!')
     print('BYE!!')
+    time.sleep(2)
     exit(0)
 
 
@@ -55,6 +57,7 @@ if(number == 0):
 else:
     print('Do play again!')
     print('BYE!!')
+    time.sleep(2)
     exit(0)
 
 
@@ -71,6 +74,7 @@ if(number == 189):
 else:
     print('Do play again!')
     print('BYE!!')
+    time.sleep(2)
     exit(0)
     
     
@@ -87,7 +91,10 @@ if(number == 428):
 else:
     print('Do play again!')
     print('BYE!!')
+    time.sleep(2)
     exit(0)
 
 print('That\'s all I have for now!')
 print('BYE CHAMPION!!')
+time.sleep(4)
+
